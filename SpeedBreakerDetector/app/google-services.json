@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "550834402758",
+    "project_id": "speedbreakerdetection-e0a22",
+    "storage_bucket": "speedbreakerdetection-e0a22.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550834402758:android:9534b9a3539c67adec6ec7",
+        "android_client_info": {
+          "package_name": "com.example.speedbreakerdetector"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0w5b40BDPL9go7qlnLOFyavwplW58FVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme -->
+    <style name="Theme.SpeedBreakerDetector" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/my_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/my_secondary</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Material3 (dynamic) -->
+        <item name="colorPrimaryContainer">@color/my_primary</item>
+        <item name="colorSecondaryContainer">@color/my_secondary</item>
+        <item name="android:statusBarColor">@color/my_primary</item>
+        <item name="android:navigationBarColor">@color/my_primary</item>
+    </style>
+
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Hazard Type -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hazard Type"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/typeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/typeSpeedBump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed Breaker"/>
+
+        <RadioButton
+            android:id="@+id/typePothole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pothole"
+            android:layout_marginStart="16dp"/>
+    </RadioGroup>
+
+    <!-- Severity -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Severity"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/severityGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <RadioButton
+            android:id="@+id/severityLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low"/>
+
+        <RadioButton
+            android:id="@+id/severityMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:layout_marginStart="16dp"/>
+
+        <RadioButton
+            android:id="@+id/severityHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High"
+            android:layout_marginStart="16dp"/>
+    </RadioGroup>
+
+    <!-- Submit -->
+    <Button
+        android:id="@+id/buttonSubmitReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Report Current Location"/>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/warningBottomSheetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/warningTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Warning Distance"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/warningDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set the distance before which you will be warned about a speed breaker or pothole."
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Current value -->
+    <TextView
+        android:id="@+id/alertDistanceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 m"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- SeekBar -->
+    <SeekBar
+        android:id="@+id/alertDistanceSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="300"
+        android:progress="100" />
+
+    <!-- Min / Max labels -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 m"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="300 m"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/item_type_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        tools:text="Speed Bump" />
+
+    <TextView
+        android:id="@+id/item_force_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Force: 9.87 m/s²" />
+
+    <TextView
+        android:id="@+id/item_location_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Location: 12.345, 67.890" />
+
+    <TextView
+        android:id="@+id/item_timestamp_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        tools:text="Dec 21, 2025, 4:20 AM" />
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+    ================================================
+    PERMISSIONS REQUIRED BY THE APP
+    ================================================
+    -->
+
+    <!-- For accessing the internet to download map tiles -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- For making the phone vibrate on detection -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- For showing notifications (required for background services) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- For running a service in the background -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
+    <!--
+    Location Permissions:
+    - FINE is for high-precision GPS.
+    - COARSE is for lower-precision network/wifi location.
+    - BACKGROUND allows the service to get location when the app isn't visible.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- Special permission for foreground services that access location on newer Android versions -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+
+
+    <!--
+    ================================================
+    APPLICATION DEFINITION
+    ================================================
+    -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SpeedBreakerDetector"
+        tools:targetApi="31">
+
+        <!-- Your Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+
+        <!--
+        MainActivity: This is the entry point of your app.
+        The <intent-filter> marks it as the icon that appears in the launcher.
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SpeedBreakerDetector">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+        HistoryActivity: The screen that shows the list of detections.
+        It is not 'exported' because only your app should be able to open it.
+        -->
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false"
+            android:label="Detection History" />
+
+        <!--
+        DetectionService: The background service.
+        `foregroundServiceType` is set to 'location' as required.
+        -->
+        <service
+            android:name=".DetectionService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+    </application>
+
+</manifest>
