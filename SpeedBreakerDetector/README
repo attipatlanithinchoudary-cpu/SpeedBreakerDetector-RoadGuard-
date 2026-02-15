@@ -1,0 +1,35 @@
+-------------------------------------------------------------------
+
+If you only want to try the application:
+
+Download the file:
+
+app-debug.apk
+
+Transfer it to your Android phone.
+
+Install the APK and open the app.
+
+--------------------------------------------------------------------
+
+To run or modify the project:
+
+Download or clone this repository.
+
+Open Android Studio.
+
+Click:
+
+File → Open
+
+Select the project folder:
+
+SpeedBreakerDetector
+
+Let Gradle sync finish.
+
+Connect a phone or start an emulator.
+
+Click Run.
+
+--------------------------------------------------------------------
